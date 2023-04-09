@@ -6,11 +6,19 @@ def import_to_jsonFile(link, shortener):
         # opened
         data = json.load(f)
         # insert
-        data[link] = shortener
+        data[shortener] = link
         # save
         with open('data.json', 'w') as f:
             json.dump(data, f)
 
 
 def seach_in_jsonFile(shortenerlink):
-    pass
+    with open('data.json', 'r') as f:
+        # opened
+        data = json.load(f)
+        # search
+        if shortenerlink in data:
+            value = data[shortenerlink]
+            return value
+        else:
+            return None
