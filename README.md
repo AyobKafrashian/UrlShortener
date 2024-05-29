@@ -11,7 +11,7 @@ git clone https://github.com/AyobKafrashian/UrlShortener.git
 
 ## run this command for getting packages
 
-Clone into the repository:
+Run with this line:
 
 ```shell
 python url_shortener.py
